@@ -19,7 +19,7 @@ pokeApi.getPokemonDetail = (pokemon) => {
 function convertPokeApiDetailToPokemon(pokeDetail){
     const pokemon = new Pokemon()
     // nome e numero
-    pokemon.number =pokeDetail.order
+    pokemon.number =pokeDetail.id
     pokemon.name = pokeDetail.name
     // seleção do tipo principal
     const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name)
