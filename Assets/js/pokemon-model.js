@@ -5,3 +5,4 @@ class Pokemon{
     types = [];
     photo;
 }
+
