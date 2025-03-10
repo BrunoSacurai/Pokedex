@@ -13,6 +13,7 @@
     align-items: center;
     width: 100%;
     padding: 1rem;
+
 }
 
 #loadMoreButtom{
@@ -21,6 +22,7 @@
     border-radius: 1rem;
     color: white;
     padding: .625rem;
+    cursor: pointer;
 }
 
 .pokemon {
@@ -30,7 +32,13 @@
     color: white;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
+
+.pokemon:hover{
+    transform: scale(1.05);
+}
+
 
 .pokemon .number{
     color: black;
@@ -79,7 +87,7 @@
 }
 
 .grass {
-    background-color: #77c850
+    background-color: #5edfc6
 }
 
 .fire {

@@ -1,38 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex</title>
-    
+
     <!-- Normalize CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
-    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Font Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="./Assets/css/global.css">
     <link rel="stylesheet" href="./Assets/css/pokedex.css">
-    
-    
+    <link rel="stylesheet" href="./Assets/css/cards.css">
+
+
 </head>
+
 <body>
-    
+
     <section class="content">
         <h1>Pokedex</h1>
-        
-        <ol id = "pokemonList" class="pokemons">
+
+        <ol id="pokemonList" class="pokemons">
             <!-- Pokemons here -->
         </ol>
         <div class="pagination">
             <button id="loadMoreButtom" type="button">
-               Carregar mais!
+                Carregar mais!
             </button>
+        </div>
+
+        <!-- Card com detalhes do pokemon / inicialmente oculto-->
+        <div id="pokemonCard" class="pokemonCard hidden">
+            <button id="closeCard">X</button>
+            <img id="pokemonImage"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+                alt="Pokemon Image">
+            <h2 id="pokemonName">Bulbasaur</h2>
+            <p id="pokemonTypes">Grass</p>
+            <p id="pokemonTypes">Poison</p>
+            <div class="tab">
+                <button class="tabLinks" onclick="openTab(event, 'about')">About</button>
+                <button class="tabLinks" onclick="openTab(event, 'moves')">Moves</button>
+                <button class="tabLinks" onclick="openTab(event, 'stats')">Stats</button>
+            </div>
+
+            <div id="about" class="tabContent">
+                <h3>About</h3>
+                <p id="pokemonSpecies">Species: Seed</p>
+                <p id="pokemonHeight">Height: 0.7cm</p>
+                <p id="pokemonWeight">Weight: 6.9Kg</p>
+                <p id="pokemonAbilities">Abilities: Overgrow, Chlorophyll</p>
+            </div>
+
+            <div id="moves" class="tabContent">
+                <h3>Moves</h3>
+                <p id="pokemonMoves">Move 1</p>
+                <p id="pokemonMoves">Move 2</p>
+                <p id="pokemonMoves">Move 3</p>
+                <p id="pokemonMoves">Move 4</p>
+            </div>
+
+            <div id="stats" class="tabContent">
+                <h3>Base Stats</h3>
+                <p id="pokemonHp">Hp: 45</p>
+                <p id="pokemonAttack">Attack: 60</p>
+                <p id="pokemonDefense">Defense: 48</p>
+                <p id="pokemonSpAtk">Sp. Atk: 65</p>
+                <p id="pokemonSpDef">Sp. Def: 65</p>
+                <p id="pokemonSpeed">Speed: 45</p>
+            </div>
         </div>
     </section>
 
@@ -40,5 +86,7 @@
     <script src="./Assets/js/pokemon-model.js"></script>
     <script src="./Assets/js/poke-api.js"></script>
     <script src="./Assets/js/main.js"></script>
+    <script src="./Assets/js/cards.js"></script>
 </body>
+
 </html>
