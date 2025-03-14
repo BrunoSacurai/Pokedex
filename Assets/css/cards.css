@@ -1,33 +1,9 @@
-.tab{
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-    text-align: center;
-} 
-.tab button{
-    background-color: inherit;
-    border:none;
-    outline: none;
-    cursor: pointer;
-    padding: 5px 12px;
-    font-size: 17px;
+*{
+    font-family: 'roboto';
+    text-transform: capitalize;
 }
-.tab button:hover{
-    background-color: #ddd;
-}
-
-.tab button.active{
-    background-color: #ce92e6;
-}
-
-.tabContent{
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-}
-
-#pokemonCard{
+/* Estilo geral do card */
+#pokemonCard {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -39,10 +15,83 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     z-index: 1000;
     width: 300px;
-
+    display: flex;
+    flex-direction: column;
 }
 
-#closeCard{
+/* Detalhes do Pokémon (nome, foto e tipos) */
+.pokemonCardDetails {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#pokemonName {
+    margin: 0 5px;
+    font-size: 24px;
+    text-align: center;
+}
+
+#pokemonImage {
+    width: 100px;
+    height: 100px;
+    border-style: none;
+    margin-bottom: 10px;
+}
+
+#pokemonTypes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.type {
+    color: white;
+    padding: .25rem .5rem;
+    font-size: .625rem;
+    border-radius: 1rem;
+    filter: brightness(1.1);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* Abas e conteúdo das abas */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 12px;
+    font-size: 17px;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: #ce92e6;
+}
+
+.tabContent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/* Botão de fechar */
+#closeCard {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -51,8 +100,13 @@
     font-size: 16px;
     cursor: pointer;
 }
-/*
-.hidden{
+
+#details{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20%;
+}
+
+.hidden {
     display: none;
 }
-*/

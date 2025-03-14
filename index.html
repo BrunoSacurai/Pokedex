@@ -41,43 +41,44 @@
 
         <!-- Card com detalhes do pokemon / inicialmente oculto-->
         <div id="pokemonCard" class="pokemonCard hidden">
-            <button id="closeCard">X</button>
-            <img id="pokemonImage"
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
-                alt="Pokemon Image">
-            <h2 id="pokemonName">Bulbasaur</h2>
-            <p id="pokemonTypes">Grass</p>
-            <p id="pokemonTypes">Poison</p>
+            <div class="pokemonCardDetails">
+                <button id="closeCard">X</button>
+                <div id="details">
+                    <h2 id="pokemonName"></h2>
+                    <div id="pokemonTypes"></div>
+                </div>
+                <img id="pokemonImage" src="" alt="Pokémon Image">
+            </div>
+
+            <!-- Abas -->
             <div class="tab">
                 <button class="tabLinks" onclick="openTab(event, 'about')">About</button>
                 <button class="tabLinks" onclick="openTab(event, 'moves')">Moves</button>
                 <button class="tabLinks" onclick="openTab(event, 'stats')">Stats</button>
             </div>
 
+            <!-- Conteúdo das abas -->
             <div id="about" class="tabContent">
                 <h3>About</h3>
-                <p id="pokemonSpecies">Species: Seed</p>
-                <p id="pokemonHeight">Height: 0.7cm</p>
-                <p id="pokemonWeight">Weight: 6.9Kg</p>
-                <p id="pokemonAbilities">Abilities: Overgrow, Chlorophyll</p>
+                <p id="pokemonSpecies"></p>
+                <p id="pokemonHeight"></p>
+                <p id="pokemonWeight"></p>
+                <p id="pokemonAbilities"></p>
             </div>
 
             <div id="moves" class="tabContent">
                 <h3>Moves</h3>
-                <p id="pokemonMoves">Move 1</p>
-                <p id="pokemonMoves">Move 2</p>
-                <p id="pokemonMoves">Move 3</p>
-                <p id="pokemonMoves">Move 4</p>
+                <ul id="pokemonMoves"></ul>
             </div>
 
             <div id="stats" class="tabContent">
                 <h3>Base Stats</h3>
-                <p id="pokemonHp">Hp: 45</p>
-                <p id="pokemonAttack">Attack: 60</p>
-                <p id="pokemonDefense">Defense: 48</p>
-                <p id="pokemonSpAtk">Sp. Atk: 65</p>
-                <p id="pokemonSpDef">Sp. Def: 65</p>
-                <p id="pokemonSpeed">Speed: 45</p>
+                <p id="pokemonHp"></p>
+                <p id="pokemonAttack"></p>
+                <p id="pokemonDefense"></p>
+                <p id="pokemonSpAtk"></p>
+                <p id="pokemonSpDef"></p>
+                <p id="pokemonSpeed"></p>
             </div>
         </div>
     </section>
@@ -85,8 +86,9 @@
     <!-- JS -->
     <script src="./Assets/js/pokemon-model.js"></script>
     <script src="./Assets/js/poke-api.js"></script>
+    <script src="./Assets/js/cards-api.js"></script>
+    <script src="./Assets/js/cards-detail.js"></script>
     <script src="./Assets/js/main.js"></script>
-    <script src="./Assets/js/cards.js"></script>
 </body>
 
 </html>

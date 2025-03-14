@@ -1,6 +1,6 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButtom = document.getElementById('loadMoreButtom')
-const limit = 5
+const limit = 20
 let offset = 0
 
 function loadPokemonItens(offset, limit) {
@@ -30,3 +30,4 @@ loadMoreButtom.addEventListener('click', () => {
     offset += limit
     loadPokemonItens(offset,limit)
 })
+
